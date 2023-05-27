@@ -1,5 +1,5 @@
 import Head from "next/head";
-import SideMenu from "../components/SideMenu";
+import SideMenu from "../components/menu/SideMenu";
 import TrendingContent from "../components/TrendingContent";
 
 type LayoutProp = {
@@ -16,10 +16,12 @@ const Layout = ({ children, title = "", description = "" }: LayoutProp) => {
         <title>{fullTitle}</title>
         <meta name="description" content={description} />
       </Head>
-      <div className="mt-2 flex justify-center">
+      <div className="mx-auto flex md:justify-center lg:w-10/12">
         <SideMenu />
-        {children}
-        <TrendingContent />
+        <main className="mx-auto flex w-[990px] gap-8">
+          {children}
+          <TrendingContent />
+        </main>
       </div>
     </>
   );

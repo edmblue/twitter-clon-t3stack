@@ -1,11 +1,7 @@
-import Layout from "../layout/Layout";
+import Explore from "./explore";
 
 const Home = () => {
-  return (
-    <Layout title="Home" description="Some description about the twitter page">
-      <p>Contenido</p>
-    </Layout>
-  );
+  return <Explore />;
 };
 
 export default Home;
