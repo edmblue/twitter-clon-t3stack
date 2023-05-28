@@ -1,5 +1,5 @@
 import GoogleIcon from "../../public/images/icons/Google.svg";
-import AppleIcon from "../../public/images/icons/Apple.svg";
+import DiscordIcon from "../../public/images/icons/Discord.svg";
 import SessionLink from "./SessionLink";
 
 type SignUpLinksType = {
@@ -15,9 +15,9 @@ const SignUpLinks: SignUpLinksType[] = [
     type: "google",
   },
   {
-    content: "Sign up with Apple",
-    icon: AppleIcon,
-    type: "apple",
+    content: "Sign up with Discord",
+    icon: DiscordIcon,
+    type: "discord",
   },
 ];
 
@@ -42,9 +42,11 @@ const TrendingContent = () => {
         <div>
           <p className="mt-3 text-[12px] leading-4 text-gray-700">
             By signing up, you agree to the{" "}
-            <span className="text-blue-500">Terms of Service</span> and{" "}
-            <span className="text-blue-500">Privacy Policy</span>, including the{" "}
-            <span className="text-blue-500">Cookie Policy</span>.
+            <span className="link-styles text-blue-500">Terms of Service</span>{" "}
+            and{" "}
+            <span className="link-styles text-blue-500">Privacy Policy</span>,
+            including the{" "}
+            <span className="link-styles text-blue-500">Cookie Policy</span>.
           </p>
         </div>
       </div>

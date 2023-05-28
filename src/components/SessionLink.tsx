@@ -1,3 +1,5 @@
+import { signIn } from "next-auth/react";
+
 type SessionLinkProps = {
   content: string;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -6,7 +8,10 @@ type SessionLinkProps = {
 
 const SessionLink = ({ content, icon: Icon, type }: SessionLinkProps) => {
   return (
-    <button className="flex items-center justify-center gap-2 rounded-full border py-[7px] hover:bg-gray-200">
+    <button
+      onClick={() => void signIn(type)}
+      className="flex items-center justify-center gap-2 rounded-full border py-[7px] hover:bg-gray-200"
+    >
       <div>
         <Icon />
       </div>

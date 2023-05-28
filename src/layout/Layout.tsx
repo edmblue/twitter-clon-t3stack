@@ -1,6 +1,7 @@
 import Head from "next/head";
 import SideMenu from "../components/menu/SideMenu";
 import TrendingContent from "../components/TrendingContent";
+import Modal from "~/components/modal/Modal";
 
 type LayoutProp = {
   children: React.ReactNode;
@@ -16,7 +17,8 @@ const Layout = ({ children, title = "", description = "" }: LayoutProp) => {
         <title>{fullTitle}</title>
         <meta name="description" content={description} />
       </Head>
-      <div className="mx-auto flex md:justify-center lg:w-10/12">
+      <Modal />
+      <div className="relative mx-auto flex md:w-10/12 md:justify-center">
         <SideMenu />
         <main className="mx-auto flex w-[990px] gap-8">
           {children}
